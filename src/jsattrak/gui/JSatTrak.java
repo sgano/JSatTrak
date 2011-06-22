@@ -3564,7 +3564,7 @@ private void lookFeelMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
         // add item to the Object list tree
 //        objListPanel.addSat2List(prop);
         
-//        //topSatTreeNode.add( new IconTreeNode(name) );
+//        //topSa.tTreeNode.add( new IconTreeNode(name) );
 //        IconTreeNode newNode = new IconTreeNode(name);
 //        // assign icon to node
 //        newNode.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/custom/sat_icon_cst.png"))));
