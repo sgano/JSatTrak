@@ -112,7 +112,16 @@ public class StkEphemerisReader
 
                 while((line = input.readLine()) != null && !ephemerisBegin)
                 {
-                    if(line.startsWith("EphemerisTimePosVel"))
+                    //if(line.startsWith("EphemerisTimePosVel"))
+                    
+                    // from slnovak (gitHub):
+                    // Remove leading and trailing spaces from line since some
+                    // STK ephem implementations have extra white space.
+                    // Additionally, the data header can be other strings, such
+                    // as "EphemerisEciTimePosVel". Check for just the
+                    // "Ephemeris" portion of the text.
+                    line = line.trim();
+                    if(line.startsWith("Ephemeris"))
                     {
                         ephemerisBegin = true;
                         break; // need to break out of loop without reading another line in the while statement
