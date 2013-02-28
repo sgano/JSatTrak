@@ -122,6 +122,8 @@
  *          4.1.2 26 Sep 2009    - special apache license version released for NASA / GSFC called ILIADS (Integrated Lunar Information Architecture for Decision Support)
  *          4.1.3 30 Mar 2010    - now can use startup.bsh script if found in root directory on startup (run locally) to config the opening scenario (for Pat M. of WWJ)
  *       
+ * //  SEG - notice of moving src master to gitHub (27 Feb 2012) - it was already mirrored, but now using it my self
+ * 
  *               Need to update to latest WWJ build - new view architecture
  *
  *          4.2   - in progress  TODO - fixes and ideas from: Christopher Suski

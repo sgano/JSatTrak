@@ -712,12 +712,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="desktopScrollPane" pref="814" max="32767" attributes="0"/>
+                  <Component id="desktopScrollPane" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="desktopScrollPane" pref="408" max="32767" attributes="0"/>
+                  <Component id="desktopScrollPane" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -759,12 +759,12 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="180" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="166" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="315" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="304" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
@@ -810,7 +810,7 @@
                   <Component id="jSeparator7" min="-2" pref="5" max="-2" attributes="1"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="statusLabel" pref="19" max="32767" attributes="1"/>
+                      <Component id="statusLabel" max="32767" attributes="1"/>
                       <Component id="statusAnimationLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="statusProgressBar" max="32767" attributes="1"/>
                   </Group>
