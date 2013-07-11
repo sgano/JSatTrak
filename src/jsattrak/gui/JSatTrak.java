@@ -123,7 +123,10 @@
  *          *******
  *          4.1.4 27 Feb 2013    - UPDATED TO Apache License, Version 2.0 (and started to manage src from GitHub)
  *          *******
- * 
+ *          4.1.5  
+ *                              - updated color chooser to work in Java 1.7.0_15 (cleaned up null pointer - substance.jar and substance-swingx.jar)
+ *                                  (Updated substance jars and trident jars to version 7.2.1:  see: http://insubstantial.posterous.com/)
+ *                              
  *               Need to update to latest WWJ build - new view architecture
  *
  *          4.2   - in progress  TODO - fixes and ideas from: Christopher Suski
@@ -368,7 +371,9 @@ public class JSatTrak extends javax.swing.JFrame implements InternalFrameListene
         try
         {
             // TEMP UNTIL NIMBUS WORKS WITH INTERNAL WINDOWS
-            String laf = "org.jvnet.substance.skin.Substance" + "Raven" + "LookAndFeel";
+            //String laf = "org.jvnet.substance.skin.Substance" + "Raven" + "LookAndFeel";
+            // SEG v4.1.4 - update to newer version of substnace api
+            String laf = "org.pushingpixels.substance.api.skin.Substance" + "Raven" + "LookAndFeel";
             LafChanger.changeLaf(this, laf);
 //            for (J2DEarthPanel w : twoDWindowVec) //strange hack to make the map repaint correctly with the LAF (needed if done at the end)
 //            {
