@@ -24,3 +24,6 @@ Ideas for next versions: (no particular order)
 - track aircraft? (does this mean I need to rename the app?)
 - swath planning
 - dyanmic changing of clipping planes when in different viewing modes -- and Exponential zooming! (see my jogl 3d soloar system)
+
+
+See also file src/name/todo.txt.
