@@ -323,7 +323,9 @@ private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 
 private void jButton7ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton7ActionPerformed
 {//GEN-HEADEREND:event_jButton7ActionPerformed
-    String laf = "org.jvnet.substance.skin.Substance" + LafList.getSelectedValue().toString() + "LookAndFeel";
+    //String laf = "org.jvnet.substance.skin.Substance" + LafList.getSelectedValue().toString() + "LookAndFeel";
+    // SEG v4.1.4 - update to newer version of substnace api
+    String laf = "org.pushingpixels.substance.api.skin.Substance" + LafList.getSelectedValue().toString() + "LookAndFeel";
     LafChanger.changeLaf(parent, laf);
 
 }//GEN-LAST:event_jButton7ActionPerformed
