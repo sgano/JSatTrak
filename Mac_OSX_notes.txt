@@ -1,0 +1,8 @@
+Mac Notes:  requires the Apple provided Java 1.6 and not oracle's java 1.7.    The Apple version performs much better overall.
+
+To revert follow these guides:
+
+http://support.apple.com/kb/HT5559
+
+http://www.java.com/en/download/help/mac_uninstall_java.xml
+
