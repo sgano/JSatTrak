@@ -6,3 +6,22 @@ http://support.apple.com/kb/HT5559
 
 http://www.java.com/en/download/help/mac_uninstall_java.xml
 
+-----------------------------------------------
+
+ALSO: 
+
+To use JSatTrak on a mac you need to have Apple's java 6 installed on your system.  If you don't follow these directions:  (note you can have both Java 6 and 7 installed at the same time):
+http://support.apple.com/kb/DL1572
+
+Then you can run the file "JSatTrak_Mac.app" to run JSatTrak properly (as long as they are in the same directory).
+
+or you can use this command from the command line:
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java  -jar JSatTrak.jar
+
+
+--------------------------------------------
+Applescript used in "JSatTrak_Mac.app" (Using AppleScriptEditor)
+--------------------------------------------
+
+set path_ to (path to me)tell application "Finder"	set theFolder to (container of item path_)end tellset thePOSIXFolder to ((POSIX path of (theFolder as alias)) as string)set run_jsattrak_command to "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java -jar " & thePOSIXFolder & "JSatTrak.jar &"tell application "Terminal"	do script run_jsattrak_commandend tell
+
