@@ -23,5 +23,5 @@ or you can use this command from the command line:
 Applescript used in "JSatTrak_Mac.app" (Using AppleScriptEditor)
 --------------------------------------------
 
-set path_ to (path to me)tell application "Finder"	set theFolder to (container of item path_)end tellset thePOSIXFolder to ((POSIX path of (theFolder as alias)) as string)set run_jsattrak_command to "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java -jar " & thePOSIXFolder & "JSatTrak.jar &"tell application "Terminal"	do script run_jsattrak_commandend tell
+set path_ to (path to me)tell application "Finder"	set theFolder to (container of item path_)end tellset thePOSIXFolder to ((POSIX path of (theFolder as alias)) as string)set run_jsattrak_command to "/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Commands/java -Djava.library.path=\"" & thePOSIXFolder & "\" -jar " & thePOSIXFolder & "JSatTrak.jar &"tell application "Terminal"	do script run_jsattrak_commandend tell
 
