@@ -143,5 +143,9 @@ Version 4.1.4 (27 Feb 2013)
 Version 4.1.5 (3 Sept 2013)
 - updated color chooser to work in Java 1.7.0_15 (cleaned up null pointer - substance.jar and substance-swingx.jar)
   (Updated substance jars and trident jars to version 7.2.1:  see: http://insubstantial.posterous.com/)
+
+Version 4.1.6 (12 August 2014)
+- Fixed exception that prevented SolverPanel.java from showing up when customizing the solver node of a custom satellite.
+
                              
 Need to update to latest WWJ build - new view architecture
