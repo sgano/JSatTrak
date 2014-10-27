@@ -147,5 +147,8 @@ Version 4.1.5 (3 Sept 2013)
 Version 4.1.6 (12 August 2014)
 - Fixed exception that prevented SolverPanel.java from showing up when customizing the solver node of a custom satellite.
 
+Version 4.1.7 (27 October 2014)
+- Fixed bug in coverage analysis (JCoverageDialog.java).  This bug caused the analysis to fail when custom satellites existed in the scenario. 
+
                              
 Need to update to latest WWJ build - new view architecture

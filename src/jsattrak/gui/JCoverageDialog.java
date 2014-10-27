@@ -935,8 +935,13 @@ private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
         return;
     }
     
-    final Hashtable<String, AbstractSatellite> tempSatHash = (Hashtable<String, AbstractSatellite>)UnoptimizedDeepCopy.copy(app.getSatHash());
-
+    // SEG v4.1.7 - bug custom satellites do not work with the UnoptimizedDeepCopy
+    //final Hashtable<String, AbstractSatellite> tempSatHash = (Hashtable<String, AbstractSatellite>)UnoptimizedDeepCopy.copy(app.getSatHash());
+    //SEG v4.1.7 - instead - just clone the hashtable, and store the current "time" so it can be returned upon finish
+    //             the reason it has to be returned to the current time is that the clone is not a deep copy and the objects will change their current time and settings.
+    final Hashtable<String, AbstractSatellite> tempSatHash = (Hashtable<String, AbstractSatellite>) app.getSatHash().clone();
+    final double startAppJulTime = app.getCurrentJulTime(); // SEG v4.1.7
+    
     final double timeStep = app.getCurrentTimeStep(); // timestep to use in calculations SECONDS
 
     // okay we are ready to begin, turn off dynamic coverage, save changes, clear data
@@ -983,6 +988,9 @@ private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
   
             // NEED TO ADD TIME START AND STOP TO CA OBJECT - to SAVE IN DIALOG AND SO USER KNOWS!!!!
 
+            
+            // SEG v4.1.7 - return to inital time within app
+            app.setTime(startAppJulTime);
 
             return null;
         } //doInBackground
