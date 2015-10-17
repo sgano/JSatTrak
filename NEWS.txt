@@ -150,5 +150,11 @@ Version 4.1.6 (12 August 2014)
 Version 4.1.7 (27 October 2014)
 - Fixed bug in coverage analysis (JCoverageDialog.java).  This bug caused the analysis to fail when custom satellites existed in the scenario. 
 
-                             
+Version 4.1.8 (16 October 2015)
+- Fixed bug in java 1.7+ which caused "no-args constructor" error for swingx's org.jdesktop.swingx.tree.TreeModelSupport component.
+This bug occurred when trying to open a saved file that contained a custom satellite.
+This was fixed by incorporating the latest swingx source (v1.6.4) directly into the project, then editing org.jdesktop.swingx.tree.TreeModelSupport to give it a no-arg empty constructor.  Should work with files saved in 4.1.7.
+- removed dependency on the swingx-0.9.4.jar (though left it in the git repository, along with the 1.6.4 compiled version)
+- Updated launcher app for OS X 10.11 (as the java 1.6 path changed)
+                         
 Need to update to latest WWJ build - new view architecture
