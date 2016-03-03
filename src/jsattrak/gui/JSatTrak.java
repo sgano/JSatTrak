@@ -4,7 +4,7 @@
  * =====================================================================
  *   This file is part of JSatTrak.
  *
- *   Copyright 2007-2013 Shawn E. Gano
+ *   Copyright 2007-2016 Shawn E. Gano
  *   
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -98,7 +98,7 @@ import name.gano.file.SaveImageFile;
  */
 public class JSatTrak extends javax.swing.JFrame implements InternalFrameListener, WindowListener, Serializable
 {
-    private String versionString = "Version 4.1.8  (16 Oct 2015)"; // Version of app
+    private String versionString = "Version 4.1.9  (3 March 2016)"; // Version of app
     
     // hastable to store all the statelites currently being processed
     private Hashtable<String,AbstractSatellite> satHash = new Hashtable<String,AbstractSatellite>();
