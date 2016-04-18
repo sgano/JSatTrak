@@ -159,5 +159,8 @@ This was fixed by incorporating the latest swingx source (v1.6.4) directly into 
                        
 Version 4.1.9 (3 March 2016)
 - Added the TCCON network to the groundstations database
+
+Version 4.1.10 (18 April 2016)
+- Added a new plugin "Export_Ephemeris_1Day_All_SGP4_Sats.bsh" to export the ephemeris of the regular "SGP4" satellites.
   
 Need to update to latest WWJ build - new view architecture
