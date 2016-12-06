@@ -68,3 +68,7 @@ for(String str : satHash.keys())
 	}
 
 } // done looping through all satellites
+
+// alert user
+System.out.println("Export of SGP4 Ephemeris Plugin Completed.");
+JOptionPane.showMessageDialog(jsattrak, "SGP4 export ephemeris plugin completed.  The flat files (one for each satellite) are located in the root directory of JSatTrak.  \n\nDetails and/or errors are displayed in the Log Console.");
