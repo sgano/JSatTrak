@@ -26,8 +26,8 @@
         <group>
             <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/JSatTrak.java</file>
             <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/objects/GroundStation.java</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/astro/time/Time.java</file>
             <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/JTrackingPanel.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/astro/propogators/sgp4_cssi/SGP4test.java</file>
         </group>
     </open-files>
 </project-private>

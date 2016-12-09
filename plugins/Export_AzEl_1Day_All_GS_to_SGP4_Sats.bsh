@@ -1,10 +1,10 @@
 // Shawn E. Gano
-// 6 December 2016
+// 9 December 2016
 // Exports the Az/El/Range/Time for all Ground Stations to all Satellites (that use the SGP4 propagator) to file(s) named  "Ground Station Name".txt (created where JSatTrak.jar / .exe is located)
 //     The export will start at the current time in the GUI and run for 1 day in increments of 60 seconds (this can be easily customized)
 //
 //   File contains: Header/separators for each Ground Station Satellite pair and then:
-//                    UTC, Az, El, Range (km)
+//                    Time, Az, El, Range (km)
 
 import jsattrak.objects.SatelliteTleSGP4;
 import jsattrak.objects.GroundStation;
@@ -38,7 +38,7 @@ for(String groundStationKey : groundStationHash.keys())
 	// open file and write data - for each ground station
 	PrintWriter writer = new PrintWriter(groundStationKey.trim() + ".txt", "UTF-8");
 		
-	writer.println("# UTC, Azimuth [deg], Elevation [deg], Range [m]  Notes: (1) UTC is Coordinated Universal Time [Julian Date]");
+	writer.println("# Time, Azimuth [deg], Elevation [deg], Range [m]  Notes: (1) Time timezone matches current selection in the JSatTrack GUI and is either local or UTC");
 	writer.println("# step size = " + stepSizeSeconds + " seconds,  Total Propagation Time = " + stopPropagationSeconds + " seconds");
 
 
@@ -66,18 +66,25 @@ for(String groundStationKey : groundStationHash.keys())
 			{
 				jd = startTime.getJulianDate() + (stepNum * stepSizeSeconds)/86400.0;
 				sgp4Sat.propogate2JulDate( jd );
+				
+				// set the current date to the ground station as well
+				gs.setCurrentJulianDate(jd);
 					
 				// Have JSatTrak calculate the Az/El/Range from the Ground Station to the Satellite
 				double[] aer = gs.calculate_AER(sgp4Sat.getTEMEPos());  // use MOD (time) for this calculation
+				
+				// Nicer formatted string for the current time
+				timeStr = startTime.convertJD2String(jd); // uses the default time format within JSatTrak as well as currently selected timezone
 
 	            // write  A/E/R data
-				writer.println(jd + "," +  aer[0] + "," +  aer[1] + "," +  aer[2]  );
+				writer.println(timeStr + "," +  aer[0] + "," +  aer[1] + "," +  aer[2]  ); // for Julian Date output use jd instead of timeStr
 				
 			} // for each time step
 		
 		
-			// finally propagate the satellite back to the original time
+			// finally propagate the satellite (and ground station) back to the original time
 			sgp4Sat.propogate2JulDate( startTime.getJulianDate() );
+			gs.setCurrentJulianDate( startTime.getJulianDate() );
 					
 		}
 		else // not a custom satellite - skipped
