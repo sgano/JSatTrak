@@ -164,3 +164,6 @@ Version 4.1.10 (18 April 2016)
 - Added a new plugin "Export_Ephemeris_1Day_All_SGP4_Sats.bsh" to export the ephemeris of the regular "SGP4" satellites.
   
 Need to update to latest WWJ build - new view architecture
+
+Version 4.1.11  (21 Feb 2017)
+-  Added Iridium NEXT TLE data source file
