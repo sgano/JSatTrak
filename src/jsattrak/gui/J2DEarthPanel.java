@@ -3,7 +3,7 @@
  * =====================================================================
  *   This file is part of JSatTrak.
  *
- *   Copyright 2007-2013 Shawn E. Gano
+ *   Copyright 2007-2018 Shawn E. Gano
  *   
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ import name.gano.astro.time.Time;
 public class J2DEarthPanel extends JPanel implements ComponentListener , java.io.Serializable
 {
     // options
-    private Color backgroundColor = new Color(236,233,216); //Color.LIGHT_GRAY;
+    private Color backgroundColor = Color.DARK_GRAY; // SEG v4.2 changed from new Color(236,233,216) //Color.LIGHT_GRAY;
         
     //private transient ImageIcon planetImage;
     //private JLabel imageMap;
@@ -59,11 +59,11 @@ public class J2DEarthPanel extends JPanel implements ComponentListener , java.io
     private transient BufferedImage bimage; // stores full res Earth image map
     private transient BufferedImage bimageScaled; // stores scaled Earth image map - added for Earth Lights Option
     
-    private String backgroundImagePath = "/images/Earth_PE_small.jpg"; // default image
+    private String backgroundImagePath = "/images/Earth_bathymetry_4k.jpg"; // SEG v4.2 changed default image from: "/images/Earth_PE_small.jpg"; // default image
     
     private double aspectRatio = 2.0; // width/height
     
-    private int imageScalingOption = BufferedImage.SCALE_FAST;
+    private int imageScalingOption = BufferedImage.SCALE_SMOOTH; // SEG v4.2 change image scaling to smooth instead of fast looks way better, and performance isn't too much worse. //BufferedImage.SCALE_FAST;
     
     // toggle button references used to see if we should be zooming
     private transient JToggleButton zoomInToggleButton;
@@ -1419,5 +1419,31 @@ public class J2DEarthPanel extends JPanel implements ComponentListener , java.io
         getImageMap().paintComponent(g);
         return buff;
     }
+ 
+    // SEG v4.2 -- new settings
+    // SEG v4.2
+    public float getDrawingLineWidth()
+    {
+        return imageMap.getDrawingLineWidth();
+    } //getDrawingLineWidth
+    
+    // SEG v4.2
+    public void setDrawingLineWidth(float lineWidth)
+    {
+        imageMap.setDrawingLineWidth(lineWidth);
+    } //setDrawingLineWidth
+    
+    // SEG v4.2
+    public float getTextLabelFontSize()
+    {
+        return this.imageMap.getTextLabelFontSize();
+    } //getTextLabelFontSize
+    
+    // SEG v4.2
+    public void setTextLabelFontSize(float fontSize)
+    {
+        this.imageMap.setTextLabelFontSize(fontSize);
+    } //setTextLabelFontSize
+    
     
 }

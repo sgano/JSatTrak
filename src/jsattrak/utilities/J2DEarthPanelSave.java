@@ -3,7 +3,7 @@
  *=====================================================================
  *   This file is part of JSatTrak.
  *
- *   Copyright 2007-2013 Shawn E. Gano
+ *   Copyright 2007-2018 Shawn E. Gano
  *   
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -74,6 +74,10 @@ public class J2DEarthPanelSave implements Serializable
     private Color landOutlineColor;
     private String dataFileName;
     private boolean showLandMassOutlines;
+    
+    // SEG v4.2 add lineWdith and Font Size
+    private float drawingLineWidth = 2.0f; // default value
+    private float textLabelFontSize = 12.0f; // default value in case it is missing
 
     // renderable objects
     Vector<JSatTrakRenderable> renderableObjects; //added 21 March 2009 -- bug to save coverage anaylsis and other renderables
@@ -119,6 +123,10 @@ public class J2DEarthPanelSave implements Serializable
 
         // added 21 March 2009 -- bug to save coverage anaylsis and other renderables
         renderableObjects = panel.getImageMap().getRenderableObjects();
+        
+        // SEG v4.2 add line width and font size
+        drawingLineWidth = panel.getDrawingLineWidth();
+        textLabelFontSize = panel.getTextLabelFontSize();
          
     } // J2DEarthPanelSave constructor
     
@@ -167,6 +175,16 @@ public class J2DEarthPanelSave implements Serializable
         {
             System.out.println("Saved File didn't contain any 2D renderable objects");
         }
+        
+        // SEG v4.2 - though I don't think this try/catch is needed
+        try
+        {
+            newPanel.setDrawingLineWidth(drawingLineWidth);
+            newPanel.setTextLabelFontSize(textLabelFontSize);
+        } catch (Exception e)
+        {
+            System.out.println("Saved File didn't contain 2D panel font size or line width");
+        }        
 
     }  
 } //J2DEarthPanelSave class

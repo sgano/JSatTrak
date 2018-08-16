@@ -2,7 +2,7 @@
  * =====================================================================
  *   This file is part of JSatTrak.
  *
- *   Copyright 2007-2013 Shawn E. Gano
+ *   Copyright 2007-2018 Shawn E. Gano
  *   
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -67,9 +67,9 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
     
     // sun drawing options
     private boolean drawSun = true;
-    private Color sunColor = Color.DARK_GRAY;//Color.BLACK;
+    private Color sunColor = Color.BLACK; // SEG v4.2 changed from Color.DARK_GRAY;//Color.BLACK;
     private int numPtsSunFootPrint = 61; // used to be 101, (51 is too low - errors on which side is filled in)
-    private float sunAlpha = 0.55f;
+    private float sunAlpha = 0.7f; // SEG v4.2, changed from 0.55f
     
     // sun
     Sun sun;
@@ -90,6 +90,11 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
     // hidden option -- mostly for debug -- Toggle this using "f" key when a 2D window is active
     public boolean showFPS = false;
     private final DecimalFormat df = new DecimalFormat("#,##0.000");
+    
+    // SEG v4.2 add options to linewidth and font size
+    private float drawingLineWidth =  2.0f; // default line width is 1
+    //private fload satPixelSize = ;// SEG -- move to satellite settings like ground station?
+    private float textLabelFontSize = 12.0f; // default is 12 
     
     public J2dEarthLabel2(ImageIcon image, double aspect, Hashtable<String,AbstractSatellite> satHash, Hashtable<String,GroundStation> gsHash, Color backgroundColor, Time currentTime, Sun sun, J2DEarthPanel earthPanel1)
     {
@@ -196,6 +201,14 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
             renderable.draw2d(g2, this, w, h, imageWidth, imageHeight, zoomFactor, centerLat, centerLong);
         }
         
+        // SEG v4.2 -- make line width customizable
+        g2.setStroke(new BasicStroke( drawingLineWidth )); 
+        
+        // SEG v4.2 set text font size -- using default font
+        Font currentFont = g.getFont();
+        Font newFont = currentFont.deriveFont(textLabelFontSize);
+        g.setFont(newFont);
+        
         // draw sun if desired
         // draw the foot print
         if(drawSun)
@@ -215,7 +228,7 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
         g2.setPaint(Color.gray);
         // dashed line, 2 pix on 2 pix off
         float[] dashPattern = { 2, 2, 2, 2 };
-        g2.setStroke(new BasicStroke(1, BasicStroke.CAP_BUTT,
+        g2.setStroke(new BasicStroke(1.0f, BasicStroke.CAP_BUTT, // SEG v4.2 - not adding to custom line width
                 BasicStroke.JOIN_MITER, 10,
                 dashPattern, 0));
         if(showLatLong)
@@ -240,7 +253,9 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
             
         }
         
-        g2.setStroke(new BasicStroke());  // standard line, no fancy stuff
+        //g2.setStroke(new BasicStroke());  // standard line, no fancy stuff
+        // SEG v4.2 -- make line width customizable
+        g2.setStroke(new BasicStroke( drawingLineWidth ));  // standard line, no fancy stuff
         
         // Draw Ground Stations
         for(GroundStation gs : gsHash.values() ) // search through all sat nodes
@@ -1817,4 +1832,40 @@ public class J2dEarthLabel2 extends JLabel  implements java.io.Serializable
             earthLightsLastUpdateMJD = this.currentTime.getMJD();
         }
     }
+    
+    // SEG v4.2
+    public float getDrawingLineWidth()
+    {
+        return this.drawingLineWidth;
+    } //getDrawingLineWidth
+    
+    // SEG v4.2
+    public void setDrawingLineWidth(float lineWidth)
+    {
+        if(lineWidth < 0.1f) // check for min bounds
+        {
+            lineWidth = 1.0f;
+        }
+        
+        this.drawingLineWidth = lineWidth;
+    } //setDrawingLineWidth
+    
+    // SEG v4.2
+    public float getTextLabelFontSize()
+    {
+        return this.textLabelFontSize;
+    } //getTextLabelFontSize
+    
+    // SEG v4.2
+    public void setTextLabelFontSize(float fontSize)
+    {
+        if(fontSize < 1.0f) // check for min bounds
+        {
+            fontSize = 12.0f;
+        }
+        
+        this.textLabelFontSize = fontSize;
+    } //setTextLabelFontSize
+    
+    
 }

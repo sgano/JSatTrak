@@ -167,3 +167,20 @@ Need to update to latest WWJ build - new view architecture
 
 Version 4.1.11  (21 Feb 2017)
 -  Added Iridium NEXT TLE data source file
+
+Version 4.2.0  (16 Aug 2018)
+-- 2D Map: added options for drawing line widths (default = 2.0) and font size for labels (default = 12)
+-- 2D Map: Changed 2D image map scaling default to smooth (looks a lot better)
+-- 2D Map: Added 4 new higher resolution 2D Earth image maps:
+     - Earth_bathymetry_4k.jpg (source: http://madriver.me/world-map-satellite.html/satellite-image-maps-and-posters-world-map)
+     - Earth_no_clouds_8k.jpg  (source: http://www.shadedrelief.com/natural3/pages/textures.html )
+     - Earth_with_clouds_4k.jpg  (source: http://www.shadedrelief.com/natural3/pages/textures.html )
+     - Earth_no_ice_or_clouds_4k.jpg  (source: http://www.shadedrelief.com/natural3/pages/textures.html ) 
+-- 2D Map: Change default 2D Earth image map to:  Earth_bathymetry_4k.jpg (source: http://madriver.me/world-map-satellite.html/satellite-image-maps-and-posters-world-map)
+-- 2D Map: Change default night fill color to full black
+-- 2D Map: Change default night fill alpha level to 0.6f
+-- 2D Map: change default background color to full black
+- (beta) add ability to go full screen exclusive mode for 2D map. Added option in the windows menu (for currently selected selected 2d window).  Known issues:  problems escaping from full screen.  Escape key listener/binding doesn't seem to be working.
+
+Version 5.0 (possible future features?)
+- Raspberry pi tracking mode and hardware (stepper motors) interface...

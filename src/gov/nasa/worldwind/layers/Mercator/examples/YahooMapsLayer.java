@@ -34,7 +34,7 @@ public class YahooMapsLayer extends BasicMercatorTiledImageLayer
 		params.setValue(AVKey.TILE_WIDTH, 256);
 		params.setValue(AVKey.TILE_HEIGHT, 256);
 		params.setValue(AVKey.DATA_CACHE_NAME, "Earth/Yahoo Maps Mercator");
-		params.setValue(AVKey.SERVICE, "http://maps.yimg.com/cv/img");
+		params.setValue(AVKey.SERVICE, "http://maps.yimg.com/cv/img"); 
 		params.setValue(AVKey.DATASET_NAME, "a");
 		params.setValue(AVKey.FORMAT_SUFFIX, ".jpg");
 		params.setValue(AVKey.NUM_LEVELS, 16);

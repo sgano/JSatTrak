@@ -24,13 +24,12 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/astro/AstroConst.java</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/NEWS.txt</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/J2DEarthPanel.java</file>
             <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/JSatTrak.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/objects/GroundStation.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/astro/time/Time.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/JTrackingPanel.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/objects/SatelliteTleSGP4.java</file>
-            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/astro/GeoFunctions.java</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/swingx/fullscreen/ToggleFullscreen.java</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/jsattrak/gui/J3DEarthPanel.java</file>
+            <file>file:/Users/sgano/NetBeansProjects/JSatTrak/src/name/gano/swingx/fullscreen/ToggleFullscreen2DWindow.java</file>
         </group>
     </open-files>
 </project-private>
