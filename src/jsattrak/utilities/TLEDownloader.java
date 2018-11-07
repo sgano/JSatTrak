@@ -42,7 +42,7 @@ public class TLEDownloader implements java.io.Serializable
 	
 	// names of all TLE files to update
 	public String[] fileNames = new String[] {
-            "sts.txt",
+            // "sts.txt", removed, no more Space Shuttle flights :(
 			"stations.txt",
             "tle-new.txt", // added 26 Sept 2008 - SEG
             // "1999-025.txt",
