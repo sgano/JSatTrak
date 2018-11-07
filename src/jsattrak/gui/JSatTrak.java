@@ -100,7 +100,7 @@ import name.gano.swingx.fullscreen.ToggleFullscreen2DWindow;
  */
 public class JSatTrak extends javax.swing.JFrame implements InternalFrameListener, WindowListener, Serializable
 {
-    private String versionString = "Version 4.2.0  (16 Aug 2018)"; // Version of app
+    private String versionString = "Version 4.2.1  (7 Nov 2018)"; // Version of app
     
     // hastable to store all the statelites currently being processed
     private Hashtable<String,AbstractSatellite> satHash = new Hashtable<String,AbstractSatellite>();

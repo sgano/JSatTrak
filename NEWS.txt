@@ -182,5 +182,8 @@ Version 4.2.0  (16 Aug 2018)
 -- 2D Map: change default background color to full black
 - (beta) add ability to go full screen exclusive mode for 2D map. Added option in the windows menu (for currently selected selected 2d window).  Known issues:  problems escaping from full screen.  Escape key listener/binding doesn't seem to be working.
 
+Version 4.2.1 (7 Nov 2018) 
+- removed Shuttle from the TLE Downloader (merged from pull request from jester-xbmc).  File is no longer on the server.
+
 Version 5.0 (possible future features?)
 - Raspberry pi tracking mode and hardware (stepper motors) interface...

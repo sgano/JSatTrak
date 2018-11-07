@@ -42,7 +42,7 @@ public class TLEDownloader implements java.io.Serializable
 	
 	// names of all TLE files to update
 	public String[] fileNames = new String[] {
-            // "sts.txt", removed, no more Space Shuttle flights :(
+            //"sts.txt", //removed, no more Space Shuttle flights :(
 			"stations.txt",
             "tle-new.txt", // added 26 Sept 2008 - SEG
             // "1999-025.txt",
@@ -84,7 +84,7 @@ public class TLEDownloader implements java.io.Serializable
 	
 	// primary category for each TLE
 	public String[] primCat = new String[] {
-            "Special-Interest",  //removed all : " Satellites" redundant
+            //"Special-Interest",  //removed all : " Satellites" redundant //removed, no more Space Shuttle flights :( // SEG v4.2.1
 			"Special-Interest",
             "Special-Interest", // new
             //"Special-Interest Satellites",
@@ -125,7 +125,7 @@ public class TLEDownloader implements java.io.Serializable
 	
 	// secondary category for each TLE
 	public String[] secondCat = new String[] {
-            "STS",
+            //"STS", //removed all : " Satellites" redundant //removed, no more Space Shuttle flights :( // SEG v4.2.1
 			"International Space Station",
             "Last 30 Days' Launches", // new
             //"FENGYUN 1C Debris",
