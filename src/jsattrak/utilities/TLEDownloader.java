@@ -42,10 +42,14 @@ public class TLEDownloader implements java.io.Serializable
 	
 	// names of all TLE files to update
 	public String[] fileNames = new String[] {
+            // --- Special-Interest Satellites -----
             //"sts.txt", //removed, no more Space Shuttle flights :(
 			"stations.txt",
             "tle-new.txt", // added 26 Sept 2008 - SEG
-            // "1999-025.txt",
+            "visual.txt", // SEG v4.2.2 added
+            "active.txt", // SEG v4.2.2 added
+            //"analyst.txt", // SEG v4.2.2 added
+            //---- Weather & Earth Resources Satellites ----
 			"weather.txt",
 			"noaa.txt",
 			"goes.txt",
@@ -53,6 +57,10 @@ public class TLEDownloader implements java.io.Serializable
 			"sarsat.txt",
 			"dmc.txt",
 			"tdrss.txt",
+            "argos.txt", // SEG v4.2.2 added
+            "planet.txt", // SEG v4.2.2 added
+            "spire.txt", // SEG v4.2.2 added
+            //---- Communications Satellites ----
 			"geo.txt",
 			"intelsat.txt",
 			"gorizont.txt",
@@ -62,19 +70,26 @@ public class TLEDownloader implements java.io.Serializable
 			"iridium-next.txt",
 			"orbcomm.txt",
 			"globalstar.txt",
+            "ses.txt", // SEG v4.2.2 added
+            "starlink.txt", // SEG v4.2.2 added
+            "satnogs.txt", // SEG v4.2.2 added
 			"amateur.txt",
 			"x-comm.txt",
 			"other-comm.txt",
-			"gps-ops.txt",
+			//---- Navigation Satellites ----
+            "gps-ops.txt",
 			"glo-ops.txt",
 			"galileo.txt",
+            "beidou.txt", // SEG v4.2.2 added
 			"sbas.txt",
 			"nnss.txt",
 			"musson.txt",
+            //---- Scientific Satellites ----
 			"science.txt",
 			"geodetic.txt",
 			"engineering.txt",
 			"education.txt",
+            //---- Miscellaneous Satellites ----
 			"military.txt",
 			"radar.txt",
 			"cubesat.txt",
@@ -87,7 +102,10 @@ public class TLEDownloader implements java.io.Serializable
             //"Special-Interest",  //removed all : " Satellites" redundant //removed, no more Space Shuttle flights :( // SEG v4.2.1
 			"Special-Interest",
             "Special-Interest", // new
-            //"Special-Interest Satellites",
+            "Special-Interest", // SEG v4.2.2 added
+            "Special-Interest", // SEG v4.2.2 added
+            //"Special-Interest", // SEG v4.2.2 added
+            //---- Weather & Earth Resources Satellites ----
 			"Weather & Earth Resources",
 			"Weather & Earth Resources",
 			"Weather & Earth Resources",
@@ -95,6 +113,10 @@ public class TLEDownloader implements java.io.Serializable
 			"Weather & Earth Resources",
 			"Weather & Earth Resources",
 			"Weather & Earth Resources",
+            "Weather & Earth Resources", // SEG v4.2.2 added
+            "Weather & Earth Resources", // SEG v4.2.2 added
+            "Weather & Earth Resources", // SEG v4.2.2 added
+            //---- Communications Satellites ----
 			"Communications",
 			"Communications",
 			"Communications",
@@ -104,19 +126,26 @@ public class TLEDownloader implements java.io.Serializable
 			"Communications",
 			"Communications",
 			"Communications",
+            "Communications", // SEG v4.2.2 added
+            "Communications", // SEG v4.2.2 added
+            "Communications", // SEG v4.2.2 added
 			"Communications",
 			"Communications",
 			"Communications",
+            //---- Navigation Satellites ----
 			"Navigation",
 			"Navigation",
 			"Navigation",
+            "Navigation", // SEG v4.2.2 added
 			"Navigation",
 			"Navigation",
 			"Navigation",
+            //---- Scientific Satellites ----
 			"Scientific",
 			"Scientific",
 			"Scientific",
 			"Scientific",
+            //---- Miscellaneous Satellites ----
 			"Miscellaneous",
 			"Miscellaneous",
 			"Miscellaneous",
@@ -126,9 +155,12 @@ public class TLEDownloader implements java.io.Serializable
 	// secondary category for each TLE
 	public String[] secondCat = new String[] {
             //"STS", //removed all : " Satellites" redundant //removed, no more Space Shuttle flights :( // SEG v4.2.1
-			"International Space Station",
+			"Space Stations", // SEG v4.2.2 renamed from International Space Station to Space Stations
             "Last 30 Days' Launches", // new
-            //"FENGYUN 1C Debris",
+            "100 (or so) Brightest", // SEG v4.2.2 added
+            "Active Satellites", // SEG v4.2.2 added
+            //"Analyst Satellites", // SEG v4.2.2 added
+            //---- Weather & Earth Resources Satellites ----
 			"Weather",
 			"NOAA",
 			"GOES",
@@ -136,7 +168,11 @@ public class TLEDownloader implements java.io.Serializable
 			"Search & Rescue (SARSAT)",
 			"Disaster Monitoring",
 			"Tracking and Data Relay Satellite System (TDRSS)",
-			"Geostationary",
+            "ARGOS Data Collection System", // SEG v4.2.2 added
+            "Planet", // SEG v4.2.2 added
+            "Spire", // SEG v4.2.2 added
+			//---- Communications Satellites ----
+            "Geosynchronous", // SEG v4.2.2 renamed Geostationary to Geosynchronous
 			"Intelsat",
 			"Gorizont",
 			"Raduga",
@@ -145,19 +181,26 @@ public class TLEDownloader implements java.io.Serializable
 			"Iridium NEXT",
 			"Orbcomm",
 			"Globalstar",
+            "SES", // SEG v4.2.2 added
+            "Starlink", // SEG v4.2.2 added
+            "SatNOGS", // SEG v4.2.2 added
 			"Amateur Radio",
 			"Experimental",
-			"Other",
-			"GPS Operational",
+			"Other Comm", // SEG v4.2.2 renammed from Other to Other Comm
+			//---- Navigation Satellites ----
+            "GPS Operational",
 			"Glonass Operational",
 			"Galileo",
+            "Beidou", // SEG v4.2.2 added
 			"Satellite-Based Augmentation System (WAAS/EGNOS/MSAS)",
 			"Navy Navigation Satellite System (NNSS)",
 			"Russian LEO Navigation",
+            //---- Scientific Satellites ----
 			"Space & Earth Science",
 			"Geodetic",
 			"Engineering",
 			"Education",
+            //---- Miscellaneous Satellites ----
 			"Miscellaneous Military",
 			"Radar Calibration",
 			"CubeSats",

@@ -185,5 +185,8 @@ Version 4.2.0  (16 Aug 2018)
 Version 4.2.1 (7 Nov 2018) 
 - removed Shuttle from the TLE Downloader (merged from pull request from jester-xbmc).  File is no longer on the server.
 
+Version 4.2.2 (30 July 2019)
+- Updated Satellite Browser list: added 9 new subsections (TLE sets) and renamed a few subsections. (Note: if they are not showing up properly update the TLEs)
+
 Version 5.0 (possible future features?)
 - Raspberry pi tracking mode and hardware (stepper motors) interface...
