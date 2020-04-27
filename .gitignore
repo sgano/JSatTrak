@@ -19,7 +19,6 @@ buildNumber.properties
 *.ctxt
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
