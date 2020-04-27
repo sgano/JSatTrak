@@ -22,6 +22,7 @@
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
+    <opt>-Djava.library.path=win64/</opt>
   </jre>
   <messages>
     <startupErr>An error occurred while starting the application.</startupErr>
