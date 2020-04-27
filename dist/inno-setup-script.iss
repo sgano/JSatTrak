@@ -42,7 +42,11 @@ Source: "C:\git\JSatTrak\data\*"; DestDir: "{app}\data"; Flags: ignoreversion re
 ;Source: "C:\git\JSatTrak\temp_images\"; DestDir: "{app}\temp_images"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\git\JSatTrak\plugins\*"; DestDir: "{app}\plugins"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\git\JSatTrak\dist\win64\*"; DestDir: "{app}\win64"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\git\JSatTrak\dist\win32\*"; DestDir: "{app}\win32"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Dirs]
+Name: "{app}\temp_images"
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

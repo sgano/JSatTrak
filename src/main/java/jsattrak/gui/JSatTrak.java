@@ -100,7 +100,7 @@ import name.gano.swingx.fullscreen.ToggleFullscreen2DWindow;
  */
 public class JSatTrak extends javax.swing.JFrame implements InternalFrameListener, WindowListener, Serializable
 {
-    private String versionString = "Version 4.2.2  (30 July 2019)"; // Version of app
+    private String versionString = GuiConstants.APP_VERSION; // Version of app
     
     // hastable to store all the statelites currently being processed
     private Hashtable<String,AbstractSatellite> satHash = new Hashtable<String,AbstractSatellite>();
@@ -626,7 +626,7 @@ public class JSatTrak extends javax.swing.JFrame implements InternalFrameListene
         jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("JSatTrak"); // NOI18N
+        setTitle(GuiConstants.APP_NAME + " " + GuiConstants.APP_VERSION); // NOI18N
 
         jPanel3.setLayout(new java.awt.BorderLayout());
 
@@ -3845,6 +3845,16 @@ private void lookFeelMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
     public static void main(final String args[])
     {
         
+    	String nativeLibPath = "dist/linux-x64/"; 
+    	String javaArch = System.getProperty("sun.arch.data.model");
+    	String osName = System.getProperty("os.name");
+    	System.out.println("Java Arch: "+javaArch+" | "+osName);
+    	
+    	if(javaArch.equals("32") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win32/";
+    	else if(javaArch.equals("64") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win64/";
+    	
+    	System.setProperty("java.library.path", nativeLibPath);
+    	
         // no command line arguments
         if(args.length == 0)
         {

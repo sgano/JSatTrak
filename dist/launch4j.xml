@@ -4,25 +4,24 @@
   <headerType>gui</headerType>
   <jar>C:\git\JSatTrak\dist\bin\jsattrak.jar</jar>
   <outfile>C:\git\JSatTrak\dist\bin\jsattrak-eclipse.exe</outfile>
-  <errTitle></errTitle>
+  <errTitle>Problem trying to find Java Runtime Environment</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>
   <downloadUrl>http://java.com/download</downloadUrl>
-  <supportUrl></supportUrl>
+  <supportUrl>https://github.com/Scicrop/JSatTrak</supportUrl>
   <stayAlive>false</stayAlive>
   <restartOnCrash>true</restartOnCrash>
   <manifest></manifest>
   <icon>C:\git\JSatTrak\dist\JSatTrakLogo_128.ico</icon>
   <jre>
     <path>C:\Program Files\AdoptOpenJDK\jdk-8.0.252.09-hotspot</path>
-    <bundledJre64Bit>true</bundledJre64Bit>
+    <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
     <minVersion>1.6</minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
-    <runtimeBits>64</runtimeBits>
-    <opt>-Djava.library.path=win64/</opt>
+    <runtimeBits>64/32</runtimeBits>
   </jre>
   <messages>
     <startupErr>An error occurred while starting the application.</startupErr>

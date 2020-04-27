@@ -33,6 +33,9 @@ import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
+
+import jsattrak.gui.GuiConstants;
+
 import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFrame; 
@@ -87,7 +90,7 @@ public class AboutDialog extends JDialog implements FadeListener
         Insets insets = form.getInsets(); // insets from frame
         
         // title
-        JLabel title = new JLabel("JSatTrak");
+        JLabel title = new JLabel(GuiConstants.APP_NAME);
         title.setFont(new Font("Arial", Font.BOLD, 24));
         title.setForeground(Color.BLACK);
         Dimension size = title.getPreferredSize();
