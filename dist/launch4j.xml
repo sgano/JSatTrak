@@ -4,7 +4,7 @@
   <headerType>gui</headerType>
   <jar>C:\git\JSatTrak\dist\bin\jsattrak.jar</jar>
   <outfile>C:\git\JSatTrak\dist\bin\jsattrak-eclipse.exe</outfile>
-  <errTitle>Problem trying to find Java Runtime Environment</errTitle>
+  <errTitle>Problem trying to find Java Runtime Environment, try to use start-jsattrak.bat.</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>

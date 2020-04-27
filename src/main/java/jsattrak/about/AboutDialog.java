@@ -104,7 +104,7 @@ public class AboutDialog extends JDialog implements FadeListener
         form.add(icon);
         
         // sub title
-        JLabel subtitle= new JLabel("Java Satellite Tracker");
+        JLabel subtitle= new JLabel(GuiConstants.APP_TITLE);
         subtitle.setForeground(Color.BLACK);
         size = subtitle.getPreferredSize();
         subtitle.setBounds(140 + insets.left, 90 + insets.top, size.width, size.height);
@@ -123,7 +123,7 @@ public class AboutDialog extends JDialog implements FadeListener
         form.add(mainText);
         vertSpace = vertSpace + vertDelta; 
         
-        JLabel mainText2 = new JLabel("Shawn E. Gano, shawn@gano.name");
+        JLabel mainText2 = new JLabel("Shawn E. Gano, shawn@gano.name (et al)");
         size = mainText2.getPreferredSize();
         mainText2.setBounds(hozSpace+indent + insets.left, vertSpace + insets.top, size.width, size.height);
         mainText2.setForeground(Color.BLACK);
@@ -132,7 +132,7 @@ public class AboutDialog extends JDialog implements FadeListener
         
         JLabel glpLogo = new JLabel("");
         // set icon
-        glpLogo.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/lgplv3-88x31.png"))));
+        glpLogo.setIcon(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icons/apache-88x37.png"))));
         size = glpLogo.getPreferredSize();
         glpLogo.setBounds(hozSpace + insets.left, 175 + insets.top, size.width, size.height);
         form.add(glpLogo);
@@ -144,14 +144,14 @@ public class AboutDialog extends JDialog implements FadeListener
         JLabel verText = new JLabel(version);
         verText.setFont(new Font("Arial", Font.BOLD, 12)); 
         size = verText.getPreferredSize();
-        verText.setBounds(205 + insets.left, 175 + insets.top, size.width, size.height);
+        verText.setBounds(190 + insets.left, 175 + insets.top, size.width, size.height);
         verText.setForeground(Color.BLACK);
         form.add(verText);
         
         // version label  for World Wind:
         JLabel verText2 = new JLabel(wwjVersion);
         size = verText2.getPreferredSize();
-        verText2.setBounds(205 + insets.left, 195 + insets.top, size.width, size.height);
+        verText2.setBounds(190 + insets.left, 195 + insets.top, size.width, size.height);
         verText2.setForeground(Color.BLACK);
         form.add(verText2);
         

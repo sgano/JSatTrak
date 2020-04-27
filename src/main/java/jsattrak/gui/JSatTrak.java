@@ -100,7 +100,7 @@ import name.gano.swingx.fullscreen.ToggleFullscreen2DWindow;
  */
 public class JSatTrak extends javax.swing.JFrame implements InternalFrameListener, WindowListener, Serializable
 {
-    private String versionString = GuiConstants.APP_VERSION; // Version of app
+    public static String versionString; // Version of app
     
     // hastable to store all the statelites currently being processed
     private Hashtable<String,AbstractSatellite> satHash = new Hashtable<String,AbstractSatellite>();
@@ -3848,7 +3848,7 @@ private void lookFeelMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
     	String nativeLibPath = "dist/linux-x64/"; 
     	String javaArch = System.getProperty("sun.arch.data.model");
     	String osName = System.getProperty("os.name");
-    	System.out.println("Java Arch: "+javaArch+" | "+osName);
+    	versionString = GuiConstants.APP_VERSION + " - x"+javaArch+" | "+osName;
     	
     	if(javaArch.equals("32") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win32/";
     	else if(javaArch.equals("64") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win64/";
