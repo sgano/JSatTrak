@@ -3845,15 +3845,11 @@ private void lookFeelMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//
     public static void main(final String args[])
     {
         
-    	String nativeLibPath = "dist/linux-x64/"; 
     	String javaArch = System.getProperty("sun.arch.data.model");
     	String osName = System.getProperty("os.name");
     	versionString = GuiConstants.APP_VERSION + " - x"+javaArch+" | "+osName;
     	
-    	if(javaArch.equals("32") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win32/";
-    	else if(javaArch.equals("64") && osName.toLowerCase().contains("windows")) nativeLibPath = "dist/win64/";
-    	
-    	System.setProperty("java.library.path", nativeLibPath);
+    	System.out.println("java.library.path -> "+System.getProperty("java.library.path"));
     	
         // no command line arguments
         if(args.length == 0)
