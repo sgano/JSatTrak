@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "JSatTrak Eclipse"
-#define MyAppVersion "4.2.2"
+#define MyAppVersion "4.2.3"
 #define MyAppPublisher "Shawn Gano et al"
 #define MyAppURL "https://github.com/Scicrop/JSatTrak"
 #define MyAppExeName "jsattrak-eclipse.exe"
@@ -37,6 +37,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
+Source: "C:\git\JSatTrak\dist\start-jsattrak.bat"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\git\JSatTrak\dist\bin\jsattrak.jar"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\git\JSatTrak\dist\bin\jsattrak-eclipse.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\git\JSatTrak\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 ;Source: "C:\git\JSatTrak\temp_images\"; DestDir: "{app}\temp_images"; Flags: ignoreversion recursesubdirs createallsubdirs
