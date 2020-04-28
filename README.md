@@ -12,4 +12,5 @@ The main differences found in this fork are the support for OpenJDK 8 and usage 
 These two projects does not exist in Maven repositories for such versions. For that reason, once you clone the repository you will find three projects: 
 a) jsattrak-eclipse, b) wwjbackport and c) joglutilsbackport. Other important difference is the use of Eclipse instead of Netbeans. Finally, was added a source code for a windows installer.
 
-Now, with three mvn commands the project is built. Thus, the main idea is to have a easy way to keep the project alive.
+Now, with one mvn command the project is built: `mvn clean install package`. Thus, the main idea is to have a easy way to keep the project alive.
+
