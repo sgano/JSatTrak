@@ -5,7 +5,7 @@ This is a fork of a great application created and developed by Shawn E. Gano (sh
 The original site can be found at: https://www.gano.name/shawn/JSatTrak/
 The main repository can be found at: https://github.com/sgano/JSatTrak
 
-The main differences found in this fork is the support for OpenJDK 8 and usage of Maven and the full source code of:
+The main differences found in this fork are the support for OpenJDK 8 and usage of Maven and the full source code of:
  - WWJ (0.6 from https://github.com/gb96/WorldWind-JAVA) 
  - JOGL-UTILS (from https://github.com/sgothel/jogl-utils) 
 
