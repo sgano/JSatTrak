@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Id: worldwind.layers.xml 14140 2010-11-21 06:43:49Z tgaskins $-->
+<!--This document specifies the initial layers to load in World Wind-->
+<!--This list can be overridden by specifying an alternate list in worldwind.xml, or by specifying an-->
+<!--alternate configuration document-->
+<!--See the javadoc for the Configuration class for details-->
+<LayerList>
+    <Layer className="gov.nasa.worldwind.layers.StarsLayer" title="Stars">
+        <!-- Individual properties can be specified within Layer entries, like this: -->
+        <Property name="Name" value="Stars#"/>
+    </Layer>
+    <Layer className="gov.nasa.worldwind.layers.SkyGradientLayer" title="Sky"/>
+    <Layer className="gov.nasa.worldwind.layers.Earth.BMNGOneImage" title="Earth Image"/>
+    <Layer href="config/Earth/BMNGWMSLayer.xml" title="Blue Marble" actuate="onLoad"/>
+    <Layer href="config/Earth/LandsatI3WMSLayer.xml" title="i3 Landsat" actuate="onLoad"/>
+    <Layer href="config/Earth/USDANAIPWMSImageLayer.xml" title="USDA NAIP" actuate="onRequest"/>
+    <Layer href="config/Earth/MSVirtualEarthAerialLayer.xml" title="MS Virtual Earth Aerial" actuate="onRequest"/>
+    <Layer href="config/Earth/USGSUrbanAreaOrthoLayer.xml" title="USGS Urban Area" actuate="onRequest"/>
+    <Layer className="gov.nasa.worldwind.layers.Earth.CountryBoundariesLayer" title="Borders" actuate="onRequest"/>
+    <Layer className="gov.nasa.worldwind.layers.Earth.NASAWFSPlaceNameLayer" title="Place Names"/>
+    <Layer className="gov.nasa.worldwind.layers.WorldMapLayer" title="World Map"/>
+    <Layer className="gov.nasa.worldwind.layers.ScalebarLayer" title="Scale Bar"/>
+    <Layer className="gov.nasa.worldwind.layers.CompassLayer" title="Compass"/>
+</LayerList>

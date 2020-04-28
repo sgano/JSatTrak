@@ -1,0 +1,118 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5 5.0.3.1555 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl lambert4SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image3.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl lambert6SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image5.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl lambert2SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image1.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl lambert7SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image6.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl lambert3SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image2.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl lambert5SG
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd image4.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Explorer_Default
+Ka 0.117647 0.117647 0.117647
+Kd 0.752941 0.752941 0.752941
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 

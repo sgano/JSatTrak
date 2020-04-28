@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Id: Clementine30Layer.xml 11316 2009-05-26 23:06:47Z dcollins $-->
+<Layer version="1" layerType="TiledImageLayer">
+    <!--Layer for Moon Clementine 30xx dataset.-->
+    <DisplayName>Clementine 30xx</DisplayName>
+    <Service serviceName="WWTileService">
+        <URL>http://worldwind28.arc.nasa.gov/TestWebApp/WebForm1.aspx</URL>
+    </Service>
+    <DatasetName>clementine30xx</DatasetName>
+    <DataCacheName>Moon/Clementine30</DataCacheName>
+    <FormatSuffix>.dds</FormatSuffix>
+    <NumLevels count="6" numEmpty="0"/>
+    <TileOrigin>
+        <LatLon units="degrees" latitude="-90" longitude="-180"/>
+    </TileOrigin>
+    <LevelZeroTileDelta>
+        <LatLon units="degrees" latitude="36" longitude="36"/>
+    </LevelZeroTileDelta>
+    <TileSize>
+        <Dimension width="512" height="512"/>
+    </TileSize>
+    <Sector>
+        <SouthWest>
+            <LatLon units="degrees" latitude="-90" longitude="-180"/>
+        </SouthWest>
+        <NorthEast>
+            <LatLon units="degrees" latitude="90" longitude="180"/>
+        </NorthEast>
+    </Sector>
+    <ForceLevelZeroLoads>true</ForceLevelZeroLoads>
+    <RetainLevelZeroTiles>true</RetainLevelZeroTiles>
+</Layer>

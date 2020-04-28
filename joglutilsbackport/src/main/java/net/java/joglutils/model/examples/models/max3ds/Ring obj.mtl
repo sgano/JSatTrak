@@ -1,0 +1,23 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+# Multi/Sub Material__51 (2) to come 
+#
+newmtl Metal_Gold
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.7 0.5 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Metal_Golhd
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.7 0.5 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__51 done 
+#
+# EOF

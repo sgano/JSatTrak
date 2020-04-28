@@ -1,0 +1,66 @@
+// Shawn E. Gano
+// 3 Sept 2015
+// Exports the ephemeris of all the custom satellites to file(s) named  "satellite name".txt (created where JSatTrak.jar / .exe is located)
+//
+//   File contains: UTC, TT, x, y, z, dx, dy, dz (J2000.0 meters and m/s)
+
+import jsattrak.objects.CustomSatellite;
+import jsattrak.utilities.StateVector;
+import name.gano.astro.time.Time;
+import name.gano.astro.AstroConst;
+
+
+// get satellite hash
+satHash =  jsattrak.getSatHash();
+
+//for(AbstractSatellite sat : satHash.elements())
+for(String str : satHash.keys())
+{ 
+	sat = satHash.get(str); // get the sat from the hash
+
+	if (sat instanceof CustomSatellite) 
+	{
+		System.out.println("Is Custom:" + str);
+		//sat.setShow3DName(false); // turn off names
+		
+		CustomSatellite custSat = (CustomSatellite)sat;
+		
+		vectorOfStates = custSat.getEphemeris(); // vectorOfStates is a Vector<StateVector> 
+		
+		// open file and write data
+		PrintWriter writer = new PrintWriter(str + ".txt", "UTF-8");
+		
+		writer.println("UTC,tt,x,y,z,dx,dy,dz  Notes: (1) state is in J2000.0 [meters and m/s] (2) UTC is Coordinated Universal Time [Julian Date] (3) tt is Terrestrial Time [Julian Date] ");
+		
+		for (StateVector stateVec : vectorOfStates) 
+		{
+				julDate = stateVec.state[0]; // get the TT (Julian Date)
+		
+				// convert to modified julian date
+			 	currentMJDtime = julDate - AstroConst.JDminusMJD;
+
+				// calculate difference between TT and UTC 
+				deltaTT2UTC = Time.deltaT(currentMJDtime); // = TT - UTC  (in days)
+				
+				// UTC = TT - deltaTT2UTC 
+				utc =  julDate - deltaTT2UTC;
+			
+			writer.println(utc +","+stateVec.toString());
+        }
+		
+		// close file
+		writer.close();
+		
+		
+	}
+	else // not a custom satellite
+	{
+			System.out.println("Not Custom:" + str);
+	}
+
+
+} // done looping through all satellites
+
+// alert user
+System.out.println("Export of Custom Satellite Ephemeris Plugin Completed.");
+JOptionPane.showMessageDialog(jsattrak, "Custom satellite export ephemeris plugin completed.  The flat files (one for each satellite) are located in the root directory of JSatTrak.  \n\nDetails and/or errors are displayed in the Log Console.");

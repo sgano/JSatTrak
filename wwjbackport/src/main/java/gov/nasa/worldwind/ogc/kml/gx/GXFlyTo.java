@@ -1,0 +1,56 @@
+/*
+Copyright (C) 2001, 2010 United States Government
+as represented by the Administrator of the
+National Aeronautics and Space Administration.
+All Rights Reserved.
+*/
+
+package gov.nasa.worldwind.ogc.kml.gx;
+
+import gov.nasa.worldwind.util.xml.XMLEventParserContext;
+import gov.nasa.worldwind.ogc.kml.*;
+
+import javax.xml.stream.events.XMLEvent;
+import javax.xml.stream.XMLStreamException;
+
+/**
+ * @author tag
+ * @version $Id: GXFlyTo.java 13388 2010-05-19 17:44:46Z tgaskins $
+ */
+public class GXFlyTo extends GXAbstractTourPrimitive
+{
+    public GXFlyTo(String namespaceURI)
+    {
+        super(namespaceURI);
+    }
+
+    @Override
+    protected void doAddEventContent(Object o, XMLEventParserContext ctx, XMLEvent event, Object... args)
+        throws XMLStreamException
+    {
+        if (o instanceof KMLAbstractView)
+            this.setView((KMLAbstractView) o);
+        else
+            super.doAddEventContent(o, ctx, event, args);
+    }
+
+    public Double getDuration()
+    {
+        return (Double) this.getField("duration");
+    }
+
+    public String getFlyToMode()
+    {
+        return (String) this.getField("flyToMode");
+    }
+
+    public KMLAbstractView getView()
+    {
+        return (KMLAbstractView) this.getField("AbstractView");
+    }
+
+    protected void setView(KMLAbstractView o)
+    {
+        this.setField("AbstractView", o);
+    }
+}

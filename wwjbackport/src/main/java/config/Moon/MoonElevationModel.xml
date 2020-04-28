@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ElevationModel version="1">
+    <DisplayName>Moon Elevation Model</DisplayName>
+    <Service serviceName="WWTileService">
+        <URL>http://worldwind25.arc.nasa.gov/moon/mars.aspx</URL>
+    </Service>
+    <DataCacheName>Moon/moontopozip</DataCacheName>
+    <DatasetName>moontopozip</DatasetName>
+    <!-- Min elevation is depth of south pole Aitken Basin, max is highest spot on moon -->
+    <ExtremeElevations min="-6000" max="8000"/>
+    <NumLevels count="8" numEmpty="0"/>
+    <FormatSuffix>.bil</FormatSuffix>
+    <TileOrigin>
+        <LatLon units="degrees" latitude="-90" longitude="-180"/>
+    </TileOrigin>
+    <LevelZeroTileDelta>
+        <LatLon units="degrees" latitude="20" longitude="20"/>
+    </LevelZeroTileDelta>
+    <TileSize width="150" height="150"/>
+    <Sector>
+        <SouthWest>
+            <LatLon units="degrees" latitude="-90" longitude="-180"/>
+        </SouthWest>
+        <NorthEast>
+            <LatLon units="degrees" latitude="90" longitude="180"/>
+        </NorthEast>
+    </Sector>
+</ElevationModel>

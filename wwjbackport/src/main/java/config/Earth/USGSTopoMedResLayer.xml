@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Id: USGSTopoMedResLayer.xml 14006 2010-10-22 04:08:19Z tgaskins $-->
+<Layer version="1" layerType="TiledImageLayer">
+    <DisplayName>USGS Topographic Maps Med</DisplayName>
+    <Service serviceName="WWTileService">
+        <URL>http://worldwind25.arc.nasa.gov/tile/tile.aspx</URL>
+    </Service>
+    <!-- day month year hours:minutes:seconds timezone -->
+    <LastUpdate>19 09 2009 04:10:00 GMT</LastUpdate>
+    <DatasetName>102</DatasetName>
+    <DataCacheName>Earth/USGS Topographic Maps</DataCacheName>
+    <AvailableImageFormats>
+        <ImageFormat>image/jpg</ImageFormat>
+    </AvailableImageFormats>
+    <FormatSuffix>.jpg</FormatSuffix>
+    <NumLevels count="9" numEmpty="5" inactive="0,1,2,3,4,5,6,7"/>
+    <TileOrigin>
+        <LatLon units="degrees" latitude="-90" longitude="-180"/>
+    </TileOrigin>
+    <LevelZeroTileDelta>
+        <LatLon units="degrees" latitude="25.6" longitude="25.6"/>
+    </LevelZeroTileDelta>
+    <TileSize>
+        <Dimension width="512" height="512"/>
+    </TileSize>
+    <Sector>
+        <SouthWest>
+            <LatLon units="degrees" latitude="17.84" longitude="-168.67"/>
+        </SouthWest>
+        <NorthEast>
+            <LatLon units="degrees" latitude="71.55" longitude="-65.15"/>
+        </NorthEast>
+    </Sector>
+    <ActiveAltitudes max="1e6"/>
+    <MapScale>1e5</MapScale>
+</Layer>

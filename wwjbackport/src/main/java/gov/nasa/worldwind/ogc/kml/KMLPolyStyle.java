@@ -1,0 +1,47 @@
+/*
+Copyright (C) 2001, 2010 United States Government
+as represented by the Administrator of the
+National Aeronautics and Space Administration.
+All Rights Reserved.
+*/
+
+package gov.nasa.worldwind.ogc.kml;
+
+/**
+ * Represents the KML <i>PolyStyle</i> element and provides access to its contents.
+ *
+ * @author tag
+ * @version $Id: KMLPolyStyle.java 13620 2010-08-11 04:05:16Z tgaskins $
+ */
+public class KMLPolyStyle extends KMLAbstractColorStyle
+{
+    /**
+     * Construct an instance.
+     *
+     * @param namespaceURI the qualifying namespace URI. May be null to indicate no namespace qualification.
+     */
+    public KMLPolyStyle(String namespaceURI)
+    {
+        super(namespaceURI);
+    }
+
+    public Boolean getFill()
+    {
+        return (Boolean) this.getField("fill");
+    }
+
+    public boolean isFill()
+    {
+        return this.getFill() == null || this.getFill();
+    }
+
+    public Boolean getOutline()
+    {
+        return (Boolean) this.getField("outline");
+    }
+
+    public boolean isOutline()
+    {
+        return this.getOutline() == null || this.getOutline();
+    }
+}

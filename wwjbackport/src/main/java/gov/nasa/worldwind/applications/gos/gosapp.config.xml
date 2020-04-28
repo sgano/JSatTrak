@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorldWindConfiguration version="1">
+    <Property name="gov.nasa.worldwind.gos.CSWServiceURI" value="http://catalog.geodata.gov/geoportal/csw/discovery?"/>
+    <Property name="gov.nasa.worldwind.gos.DisplayNameShort" value="Geospatial One-Stop Portal (geodata.gov)"/>
+    <Property name="gov.nasa.worldwind.gos.DisplayNameLong" value="World Wind Geospatial One-Stop Portal"/>
+    <Property name="gov.nasa.worldwind.gos.GeodataControllerClassName"
+              value="gov.nasa.worldwind.applications.gos.services.CSWGeodataController"/>
+    <!-- Set the maximum number of records to (2^31)-1, the maximum value of a 32 bit integer.-->
+    <Property name="gov.nasa.worldwind.gos.MaxRecords" value="2147483647"/>
+    <Property name="gov.nasa.worldwind.gos.MetadataURI" value="http://www.geodata.gov/E-FW/DiscoveryServlet"/>
+    <Property name="gov.nasa.worldwind.gos.RecordListLayerName" value="geodata.gov Results"/>
+    <Property name="gov.nasa.worldwind.gos.RecordPageSize" value="10"/>
+    <Property name="gov.nasa.worldwind.gos.RetrievedLayerSuffix" value=""/>
+    <Property name="gov.nasa.worldwind.gos.ServiceStatusURI"
+              value="http://registry.fgdc.gov/statuschecker/services/rest/index.php?"/>
+    <Property name="gov.nasa.worldwind.gos.ServiceStatusMetadataURI"
+              value="http://registry.fgdc.gov/statuschecker/ServiceDetail_wms.php?"/>
+    <Property name="gov.nasa.worldwind.gos.VersionString" value="0.1"/>
+    <SortOrderList>
+        <Category key="relevance" displayName="Relevance"/>
+        <Category key="title" displayName="Title"/>
+        <Category key="dateDescending" displayName="Date"/>
+        <Category key="areaAscending" displayName="Smallest to Largest Area"/>
+        <Category key="areaDescending" displayName="Largest to Smallest Area"/>
+    </SortOrderList>
+    <ContentTypeList>
+        <Category key="liveData" displayName="Live Data and Maps"
+                  imageResource="contentType.LiveDataImage"
+                  smallImageResource="contentType.LiveDataImageSmall"/>
+        <Category key="downloadableData" displayName="Downloadable Data"
+                  imageResource="contentType.DownloadableDataImage"
+                  smallImageResource="contentType.DownloadableDataImageSmall"/>
+        <Category key="offlineData" displayName="Offline Data"
+                  imageResource="contentType.OfflineDataImage"
+                  smallImageResource="contentType.OfflineDataImageSmall"/>
+        <Category key="document" displayName="Documents"
+                  imageResource="contentType.DocumentImage"
+                  smallImageResource="contentType.DocumentImageSmall"/>
+        <Category key="application" displayName="Applications"
+                  imageResource="contentType.ApplicationImage"
+                  smallImageResource="contentType.ApplicationImageSmall"/>
+        <Category key="geographicService" displayName="Geographic Services"
+                  imageResource="contentType.GeographicServiceImage"
+                  smallImageResource="contentType.GeographicServiceImageSmall"/>
+        <Category key="clearinghouse" displayName="Clearinghouses"
+                  imageResource="contentType.ClearinghouseImage"
+                  smallImageResource="contentType.ClearinghouseImageSmall"/>
+        <Category key="geographicActivities" displayName="Planned Data Activities"
+                  imageResource="contentType.GeographicActivitiesImage"
+                  smallImageResource="contentType.GeographicActivitiesImageSmall"/>
+        <Category key="staticMapImage"
+                  imageResource=""
+                  smallImageResource=""/>
+        <Category key="mapFiles"
+                  imageResource=""
+                  smallImageResource=""/>
+    </ContentTypeList>
+    <DataCategoryList>
+        <Category key="farming" displayName="Agriculture and Farming"/>
+        <Category key="biota" displayName="Biology and Ecology"/>
+        <Category key="boundaries" displayName="Administrative and Political Boundaries"/>
+        <Category key="climatologyMeteorologyAtmosphere" displayName="Atmospheric and Climatic"/>
+        <Category key="economy" displayName="Business and Economic"/>
+        <Category key="elevation" displayName="Elevation and Derived Products"/>
+        <Category key="environment" displayName="Environmental and Conservation"/>
+        <Category key="geoscientificInformation" displayName="Geological and Geophysical"/>
+        <Category key="health" displayName="Human Health and Disease"/>
+        <Category key="imageryBaseMapsEarthCover" displayName="Imagery and Base Maps"/>
+        <Category key="intelligenceMilitary" displayName="Military"/>
+        <Category key="inlandWaters" displayName="Inland Water Resources"/>
+        <Category key="location" displayName="Locations and Geodetic Networks"/>
+        <Category key="oceans" displayName="Oceans and Estuaries"/>
+        <Category key="planningCadastre" displayName="Cadastral"/>
+        <Category key="society" displayName="Cultural, Society, and Demographics"/>
+        <Category key="structure" displayName="Facilities and Structures"/>
+        <Category key="transportation" displayName="Transportation Networks"/>
+        <Category key="utilitiesCommunication" displayName="Utilities and Communication"/>
+    </DataCategoryList>
+    <ServiceStatusList>
+        <ServiceStatus minScore="76" maxScore="100" displayName="Excellent Availability (75%-100% uptime)"
+                       imageResource="serviceStatus.ExcellentImage"/>
+        <ServiceStatus minScore="51" maxScore="75" displayName="Good Availability (50%-75% uptime)"
+                       imageResource="serviceStatus.GoodImage"/>
+        <ServiceStatus minScore="26" maxScore="50" displayName="Bad Availability (25%-50% uptime)"
+                       imageResource="serviceStatus.BadImage"/>
+        <ServiceStatus minScore="0" maxScore="25" displayName="Very Bad Availability (0%-25% uptime)"
+                       imageResource="serviceStatus.VeryBadImage"/>
+        <ServiceStatus minScore="-99.99" maxScore="-99.99" displayName="Unknown Availability"
+                       imageResource="serviceStatus.UnknownImage"/>
+        <ServiceStatus minScore="NaN" maxScore="NaN" displayName="No Information"
+                       imageResource="serviceStatus.NoInformationImage"/>
+    </ServiceStatusList>
+    <ResourceList>
+        <!--Generic Resources-->
+        <Resource name="generic.SearchImage"
+                  path="gov/nasa/worldwind/applications/gos/images/search-24.png"/>
+        <!--Content Type Resources-->
+        <Resource name="contentType.LiveDataImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_Live_Data_and_Maps.png"/>
+        <Resource name="contentType.LiveDataImageSmall"
+                  url="http://www.geodata.gov/Portal/images/miniLive_Data_and_Maps16.png"/>
+        <Resource name="contentType.DownloadableDataImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_DownloadableData.png"/>
+        <Resource name="contentType.DownloadableDataImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniDownloadableData16.png"/>
+        <Resource name="contentType.OfflineDataImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_OfflineData.png"/>
+        <Resource name="contentType.OfflineDataImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniOfflineData16.png"/>
+        <Resource name="contentType.DocumentImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_Documents.png"/>
+        <Resource name="contentType.DocumentImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniDocuments16.png"/>
+        <Resource name="contentType.ApplicationImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_Applications.png"/>
+        <Resource name="contentType.ApplicationImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniApplications16.png"/>
+        <Resource name="contentType.GeographicServiceImage"
+                  url="http://www.geodata.gov/Portal/images/ContentType_Geographic_Services.png"/>
+        <Resource name="contentType.GeographicServiceImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniGeographic_Services16.png"/>
+        <Resource name="contentType.ClearinghouseImage"
+                  url="http://www.geodata.gov/Portal/images/ContenType_Clearinghouse.png"/>
+        <Resource name="contentType.ClearinghouseImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniClearinghouse16.png"/>
+        <Resource name="contentType.GeographicActivitiesImage"
+                  url="http://www.geodata.gov/Portal/images/Marketplace_Planned_Acquistion.png"/>
+        <Resource name="contentType.GeographicActivitiesImageSmall"
+                  url="http://gos2.geodata.gov/Portal/images/miniGeographic_Activities16.png"/>
+        <!-- Service Checker Resources-->
+        <Resource name="serviceStatus.ExcellentImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerExcellent16.png"/>
+        <Resource name="serviceStatus.GoodImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerGood16.png"/>
+        <Resource name="serviceStatus.BadImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerBad16.png"/>
+        <Resource name="serviceStatus.VeryBadImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerVeryBad16.png"/>
+        <Resource name="serviceStatus.UnknownImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerUnknown16.png"/>
+        <Resource name="serviceStatus.NoInformationImage"
+                  url="http://gos2.geodata.gov/Portal/images/serviceCheckerNoInformation16.png"/>
+    </ResourceList>
+</WorldWindConfiguration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

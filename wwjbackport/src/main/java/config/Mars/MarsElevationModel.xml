@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ElevationModel version="1">
+    <DisplayName>Mars Elevation Model</DisplayName>
+    <Service serviceName="WWTileService">
+        <URL>http://worldwind25.arc.nasa.gov/mars/mars.aspx</URL>
+    </Service>
+    <DataCacheName>Mars/molazip</DataCacheName>
+    <DatasetName>molazip</DatasetName>
+    <!-- Min elevation is depth of Hellas Basin, max is height of Olympus Mons -->
+    <ExtremeElevations min="-800" max="22000"/>
+    <NumLevels count="8" numEmpty="0"/>
+    <FormatSuffix>.bil</FormatSuffix>
+    <TileOrigin>
+        <LatLon units="degrees" latitude="-90" longitude="-180"/>
+    </TileOrigin>
+    <LevelZeroTileDelta>
+        <LatLon units="degrees" latitude="20" longitude="20"/>
+    </LevelZeroTileDelta>
+    <TileSize width="150" height="150"/>
+    <Sector>
+        <SouthWest>
+            <LatLon units="degrees" latitude="-90" longitude="-180"/>
+        </SouthWest>
+        <NorthEast>
+            <LatLon units="degrees" latitude="90" longitude="180"/>
+        </NorthEast>
+    </Sector>
+</ElevationModel>

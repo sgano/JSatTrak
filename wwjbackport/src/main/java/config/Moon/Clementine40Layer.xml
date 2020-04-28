@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Id: Clementine40Layer.xml 11316 2009-05-26 23:06:47Z dcollins $-->
+<Layer version="1" layerType="TiledImageLayer">
+    <!--Layer for Moon Clementine 40xx color dataset.-->
+    <DisplayName>Clementine 40xx Color</DisplayName>
+    <Service serviceName="WWTileService">
+        <URL>http://worldwind25.arc.nasa.gov/tile/tile.aspx</URL>
+    </Service>
+    <DatasetName>moon40xxcolor</DatasetName>
+    <DataCacheName>Moon/Clementine40</DataCacheName>
+    <FormatSuffix>.dds</FormatSuffix>
+    <NumLevels count="6" numEmpty="0"/>
+    <TileOrigin>
+        <LatLon units="degrees" latitude="-90" longitude="-180"/>
+    </TileOrigin>
+    <LevelZeroTileDelta>
+        <LatLon units="degrees" latitude="36" longitude="36"/>
+    </LevelZeroTileDelta>
+    <TileSize>
+        <Dimension width="512" height="512"/>
+    </TileSize>
+    <Sector>
+        <SouthWest>
+            <LatLon units="degrees" latitude="-90" longitude="-180"/>
+        </SouthWest>
+        <NorthEast>
+            <LatLon units="degrees" latitude="90" longitude="180"/>
+        </NorthEast>
+    </Sector>
+    <ForceLevelZeroLoads>true</ForceLevelZeroLoads>
+    <RetainLevelZeroTiles>true</RetainLevelZeroTiles>
+</Layer>

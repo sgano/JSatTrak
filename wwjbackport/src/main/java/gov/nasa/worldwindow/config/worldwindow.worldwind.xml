@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--$Id: worldwindow.worldwind.xml 13266 2010-04-10 02:47:09Z tgaskins $-->
+<WorldWindConfiguration version="1">
+    <LayerList href="gov/nasa/worldwindow/config/InitialLayerConfiguration.xml"/>
+    <Property name="gov.nasa.worldwindow.ApplicationDisplayName" value="NASA World Window"/>
+    <Property name="gov.nasa.worldwind.avkey.InitialLatitude" value="30"/>
+    <Property name="gov.nasa.worldwind.worldwindow.ToolBarIconSizeProperty" value="52"/>
+</WorldWindConfiguration>

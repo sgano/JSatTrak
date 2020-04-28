@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Details</title>
+<style type="text/css">
+<!--
+.regular {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+.regular_strong {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.title_medium {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.title_big {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="500" border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="3" align="left" valign="top" class="title_big">${Title}</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left" valign="top" class="regular"><span class="regular_strong">National
+      Applications:</span><br>
+      ${NationalApplications}</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="left" valign="top" class="regular"> <span class="regular_strong">Online
+      Resource:</span><br> <a href="${OnlineResource}">${OnlineResource}</a></td>
+  </tr>
+
+  <tr>
+    <td width="150" align="left" valign="top" class="regular"><span class="regular_strong">Publication
+      Date:</span><br>
+      ${HarvestDate}</td>
+    <td width="150" align="left" valign="top" class="regular"><span class="regular_strong">Name:</span><br>
+      ${Name}</td>
+    <td align="left" valign="top" class="regular"><span class="regular_strong">Version:</span><br>
+      ${Version}</td>
+  </tr>
+
+  <tr>
+    <td width="150" align="left" valign="top" class="regular"><span class="regular_strong">Service:</span><br>
+      ${ServiceType}</td>
+    <td colspan="2" align="left" valign="top" class="regular"><span class="regular_strong">Originator:</span><br>
+      ${Originator}</td>
+  </tr>
+
+  <tr>
+    <td width="150" align="left" valign="top" class="regular"><span class="regular_strong">Harvest
+      Type:</span><br>
+      ${HarvestType}</td>
+    <td colspan="2" align="left" valign="top" class="regular"><span class="regular_strong">ID:</span><br>
+      ${Id}</td>
+  </tr>
+</table>
+<br>
+<table width="500" border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" align="left" valign="top" class="title_medium">Information:</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Keywords:</td>
+    <td align="left" valign="top" class="regular">${Keywords}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Description:</td>
+    <td align="left" valign="top" class="regular">${Description}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Abstract:</td>
+    <td align="left" valign="top" class="regular">${Abstract}</td>
+  </tr>
+</table>
+<br>
+<table width="500" border="0" cellpadding="5" cellspacing="0">
+
+  <tr>
+    <td colspan="2" align="left" valign="top" class="title_medium">Time Range</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Harvest Date</td>
+    <td align="left" valign="top" class="regular">${HarvestDate}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Content Start Date:</td>
+    <td align="left" valign="top" class="regular">${ContentStartDate}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Content End Date:</td>
+    <td align="left" valign="top" class="regular">${ContentEndDate}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Modification Date</td>
+    <td align="left" valign="top" class="regular">${ModificationDate}</td>
+  </tr>
+</table>
+<br>
+<table width="500" border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td colspan="2" align="left" valign="top" class="title_medium">Contact Information</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Name</td>
+    <td align="left" valign="top" class="regular">${ContactName}</td>
+  </tr>
+  <tr>
+    <td width="150" align="left" valign="top" class="regular_strong">Email:</td>
+    <td align="left" valign="top" class="regular">${ContactEmailAddress}</td>
+  </tr>
+</table>
+</body>
+</html>

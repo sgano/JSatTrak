@@ -1,0 +1,33 @@
+Source of FREE models used for testing:
+=======================================
+
+http://modelsbank.3dm3.com/model192.htm
+   - 3DS Model: 3dm-q3shotgun.3ds
+   - Texture:   shotgun.jpg
+
+http://www.sharecg.com/v/9209/3d-model/Red-Sandals-in-3ds-format?PSID=f649fd7e461dda533eeca9f6b64fbbef
+   - 3DS Model: red_sandal.3ds
+   - Texture: WS0001-0.jpg, WS0001-1.jpg
+
+http://www.3dnuts.com/models.shtml
+   - 3DS Model: hydrant.3ds
+
+http://www.turbosquid.com/FullPreview/Index.cfm/ID/266818
+   - 3DS Model: GenericTank.3ds
+   - Texture: (don't seem to load) Hull.jpg, Wheels.jpg, Tracks.jpg
+
+http://www.turbosquid.com/FullPreview/Index.cfm/ID/267077
+   - 3DS Model: BurnBarrel.3ds
+   - Texture: barrbump.bmp, barrdiff.bmp
+
+http://www.turbosquid.com/FullPreview/Index.cfm/ID/269617
+   - 3DS Model: chess.3ds
+   - Texture: (don't seem to load) wood.jpg
+
+http://www.turbosquid.com/FullPreview/Index.cfm/ID/272465
+   - 3DS Model: MSLUGX2.3ds
+
+Celestia
+   - 3DS Model: apollo.3ds
+
+
