@@ -136,6 +136,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
                 <directory>src/main/java</directory>
                 <filtering>false</filtering>
                 <includes>
+                	<include>**/*.jpg</include>
+                	<include>**/*.gif</include>
                     <include>**/*.png</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
